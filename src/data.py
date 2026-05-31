@@ -165,7 +165,7 @@ class DataModule:
         model_name: str,
         context_length: int = 512,
         test_size: float = 0.1,
-        seed: int = 2333,
+        seed: int = 42,
         cache_dir: str = "./cache",
         num_proc: int = 4,
         use_modelscope: bool = True
