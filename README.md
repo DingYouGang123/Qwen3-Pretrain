@@ -59,6 +59,15 @@ python train.py --config configs/qwen3_0.6b.yaml
 bash scripts/train.sh
 ```
 
+### 5.评估
+```bash
+python eval.py \
+    --output_dir ./outputs/qwen3-0.6b/checkpoint-2000 \
+    --data_path data/val.jsonl \
+    --batch_size 8 \
+    --context_length 2048
+```
+
 ## 特性
 
 - ✅ 支持 Qwen3-0.6B 模型架构
