@@ -1,7 +1,7 @@
 data:
-  data_path: "/data/WIKI_CN/wikipedia-zh-cn-20240820.json"
+  data_path: "/data/WIKI_CN/wikipedia-zh-cn-20260501.json"
   test_size: 0.1
-  seed: 2333
+  seed: 42
   context_length: 512
   num_proc: 4
 
