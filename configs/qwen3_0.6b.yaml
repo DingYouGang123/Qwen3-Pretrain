@@ -1,0 +1,87 @@
+data:
+  # 数据文件路径（JSON 格式）
+  data_path: "/data/WIKI_CN/wikipedia-zh-cn-20240820.json"
+  # 测试集比例
+  test_size: 0.1
+  # 随机种子
+  seed: 2333
+  # 上下文长度
+  context_length: 512
+  # 并行处理进程数
+  num_proc: 4
+
+model:
+  # 基础模型名称（使用 Qwen3-0.6B）
+  model_name: "Qwen/Qwen3-0.6B"
+  # 缓存目录
+  cache_dir: "./cache"
+  # 词表大小（根据 tokenizer 动态设置）
+  vocab_size: 151936
+  # 隐藏层维度
+  hidden_size: 1024
+  # 中间层维度
+  intermediate_size: 4096
+  # 注意力头数
+  num_attention_heads: 16
+  # 隐藏层数量
+  num_hidden_layers: 24
+  # 最大位置嵌入
+  max_position_embeddings: 512
+  # BOS token ID
+  bos_token_id: 151643
+  # EOS token ID
+  eos_token_id: 151643
+
+training:
+  # 输出目录
+  output_dir: "./checkpoints"
+  # 每个 GPU 的训练 batch size
+  per_device_train_batch_size: 16
+  # 每个 GPU 的评估 batch size
+  per_device_eval_batch_size: 16
+  # 评估策略 (steps/epoch)
+  eval_strategy: "steps"
+  # 评估步数间隔
+  eval_steps: 500
+  # 日志记录步数间隔
+  logging_steps: 50
+  # 梯度累积步数
+  gradient_accumulation_steps: 8
+  # 训练轮数
+  num_train_epochs: 2
+  # 权重衰减
+  weight_decay: 0.1
+  # 预热步数
+  warmup_steps: 200
+  # 优化器类型
+  optim: "adamw_torch"
+  # 学习率调度器类型
+  lr_scheduler_type: "cosine"
+  # 学习率
+  learning_rate: 5e-4
+  # 保存 checkpoints 的步数间隔
+  save_steps: 500
+  # 保留的 checkpoints 最大数量
+  save_total_limit: 10
+  # BF16 混合精度训练（Ampere 架构及以上显卡推荐）
+  bf16: true
+  # FP16 混合精度训练（Ampere 架构以下显卡使用）
+  fp16: false
+  # 随机种子
+  seed: 42
+  # 数据加载器工作进程数
+  dataloader_num_workers: 4
+  # 是否移除未使用的列
+  remove_unused_columns: false
+  # 报告目标 (none/swanlab)
+  report_to: "none"
+
+swanlab:
+  # 是否启用 SwanLab
+  enabled: false
+  # 项目名称
+  project_name: "WikiLLM"
+  # 实验名称（可选，默认自动生成）
+  experiment_name: null
+  # 实验描述
+  description: "Qwen3-0.6B Pretraining"
