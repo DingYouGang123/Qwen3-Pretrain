@@ -10,7 +10,7 @@ import transformers
 logger = logging.getLogger(__name__)
 
 
-def load_dataset(data_path: str, test_size: float = 0.1, seed: int = 2333) -> datasets.DatasetDict:
+def load_dataset(data_path: str, test_size: float = 0.1, seed: int = 42) -> datasets.DatasetDict:
     """加载数据集并划分训练集和测试集
     
     Args:
