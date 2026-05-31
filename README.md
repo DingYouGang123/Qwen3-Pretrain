@@ -48,7 +48,7 @@ bash scripts/download_data.sh
 编辑 `configs/qwen3_0.6b.yaml` 文件，调整数据路径、训练参数等。
 
 ### 4. 开始训练
-
+训练前请确保数据路径正确
 ```bash
 python train.py --config configs/qwen3_0.6b.yaml
 ```
