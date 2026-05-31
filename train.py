@@ -268,7 +268,7 @@ def main(args: Optional[argparse.Namespace] = None):
     run_generation_test(
         model=model_module.model,
         tokenizer=data_module.tokenizer,
-        prompts=["人工智能", "牛顿", "北京市", "亚洲历史"],
+        prompts=["人工智能", "中国人民大学", "北京市", "字节跳动"],
         swanlab_enabled=config.swanlab.enabled,
     )
     
