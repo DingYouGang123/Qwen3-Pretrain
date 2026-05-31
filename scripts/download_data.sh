@@ -5,7 +5,7 @@
 set -e
 
 DATA_DIR="${1:-/data/WIKI_CN}"
-DATA_FILE="${DATA_DIR}/wikipedia-zh-cn-20240820.json"
+DATA_FILE="${DATA_DIR}/wikipedia-zh-cn-20260501.json"
 
 echo "========================================"
 echo "Data Download Script"
@@ -38,7 +38,7 @@ else
     echo "Creating sample data file for testing..."
     cat > "${DATA_FILE}" << 'EOF'
 {"text": "人工智能是计算机科学的一个分支，它企图了解智能的实质，并生产出一种新的能以人类智能相似的方式做出反应的智能机器。"}
-{"text": "牛顿是英国著名的物理学家、数学家和天文学家，经典力学体系的奠基人。"}
+{"text": "中国人民大学位于北京市海淀区，中央直管高校，直属于中华人民共和国教育部，由教育部与北京市共建。"}
 {"text": "北京市是中华人民共和国的首都，是全国的政治中心、文化中心和国际交往中心。"}
 {"text": "亚洲是世界上面积最大、人口最多的大洲，拥有丰富的自然资源和多样的文化。"}
 {"text": "深度学习是机器学习的一个子领域，它使用多层神经网络来学习数据的层次化表示。"}
