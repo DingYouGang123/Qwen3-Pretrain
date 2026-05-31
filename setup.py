@@ -9,7 +9,7 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 setup(
     name="qwen3-pretrain",
     version="0.1.0",
-    author="Your Name",
+    author="中国人民大学丁有罡",
     description="工业级 Qwen3-0.6B 大模型预训练项目",
     long_description=long_description,
     long_description_content_type="text/markdown",
