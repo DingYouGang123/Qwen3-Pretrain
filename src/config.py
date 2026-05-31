@@ -11,9 +11,9 @@ import yaml
 @dataclass
 class DataConfig:
     """数据配置"""
-    data_path: str = "/data/WIKI_CN/wikipedia-zh-cn-20240820.json"
+    data_path: str = "/data/WIKI_CN/wikipedia-zh-cn-20260501.json"
     test_size: float = 0.1
-    seed: int = 2333
+    seed: int = 42
     context_length: int = 512
     num_proc: int = 4
 
