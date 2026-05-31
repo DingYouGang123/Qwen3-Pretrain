@@ -1,6 +1,6 @@
 data:
   # 数据文件路径（JSON 格式）
-  data_path: "/data/WIKI_CN/wikipedia-zh-cn-20240820.json"
+  data_path: "/data/WIKI_CN/wikipedia-zh-cn-20260501.json"
   # 测试集比例
   test_size: 0.1
   # 随机种子
